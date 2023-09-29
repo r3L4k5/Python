@@ -1,4 +1,4 @@
-
+import os
 def main():
     glosLista = {}
 
@@ -12,11 +12,12 @@ def main():
         fortsatt  = input("Vill du ange fler? j/n: ")
         if fortsatt == "n":
             break
-
+    os.system("cls")
+    
     while True:
        
 
-        print("\n Nu start glosförhöret!")
+        print("\n Nu startar glosförhöret!")
 
         for glosa in glosLista:
             svar = input(f"\n {glosa} : ")
