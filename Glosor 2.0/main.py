@@ -5,7 +5,7 @@ import random
 
 sqList, cursor = Gloslista2.connect()
 
-frst = input("Vill du börja med nya glosor? j/n: ")
+frst = input("Vill du börja med nya glosor? j/n: ").lower()
 
 if frst == 'j':
     Gloslista2.delete(sqList,cursor)
@@ -35,7 +35,7 @@ show = Gloslista2.showList(cursor)
 
 while len(show) != 0:
     word = random.choice(show)
-    svar = input(f"Överätt {word[1]} till {trOrd}:  ")
+    svar = input(f"Översätt {word[1]} till {trOrd}:  ")
     if svar == word[2]:
         print("Rätt svar!")
     else:
@@ -44,4 +44,4 @@ while len(show) != 0:
     #print(word[2])n
     show.remove(word)
 
-print("Du är klar med programmet!")
+input("Du är klar med programmet!")
