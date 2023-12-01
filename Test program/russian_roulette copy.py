@@ -23,9 +23,9 @@ os.system("cls")
 
 
     
-for i in range(len(players)):
+for i in range(len(players) - 1):
     
-    while len(players) >1 and i <= len(players):
+    while len(players) >1:
 
         death = random.randint(1,6)
         
@@ -50,19 +50,19 @@ for i in range(len(players)):
             print(f"\n Spelaren {players[i]} elimineras \n ")
             players.pop(i)
             time.sleep(random.randint(2,2))
-            i+=1
-            if i >= len(players) :
-                i+=1
-                break
+            #i+=1
+            #if i >= len(players) - 1 :
+                
+               # break
 
         else:
             print(f"\n Spelaren {players[i]} kvarstår \n")
             time.sleep(random.randint(2,2))
-            i+=1
-            if i >= len(players):
+            #i+=1
+            #if i >= len(players) - 1:
                 
-                break
-
+               # break
+        i+=1
     
         #player_amount += 1
     
