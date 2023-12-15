@@ -1,11 +1,9 @@
-number = input("Vilket tal ska vi förenkla?: ")
-ind = list(number)
+number = str(input("Vilket tal ska vi förenkla?: "))
 
 def cutter():
-    for num in ind:
-        if num == "0":
-            ind.remove(num)
-        elif num == ",":
-            def cutterDec():
-                
+    y = number.strip("0")
+    return y
 
+x = cutter()
+
+print(x)
