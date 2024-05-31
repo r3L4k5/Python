@@ -3,8 +3,6 @@ base_num = int(input("Vilket tal ska användas?: "))
 
 bin_num = bin(base_num)  
 
-print(bin_num.strip("0b"))
-
 i = base_num + 1
 
 while True:

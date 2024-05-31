@@ -6,7 +6,7 @@ class card:
         self.value = value
 
     def __str__(self):
-        return (self.deno + " " + str(self.value))
+        return(self.deno + " " + str(self.value))
     
     
 
