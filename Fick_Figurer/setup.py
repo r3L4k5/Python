@@ -1,11 +1,6 @@
 
 import index as inx
-#import battle as btl
-
-player_name = ""
-gender = ""
-player_gang = []
-player_inventory = []
+import battle as btl
 
 def name_and_gender():
     global player_name, gender, player
@@ -21,11 +16,14 @@ def name_and_gender():
         if confirm == "yes":
             player = inx.Trainer(player_name, player_gender, [], [])
             break
+    
+    return player
 
 
 name_and_gender()
 
 def open_beast_dex():
+    
     print("\nThe Beastdex:")   
     for beasts in inx.beast_dex:
         align = 17 - len(beasts.name) - 6
@@ -40,7 +38,9 @@ def add_to_party():
     choose_beast = input("\nChoose a beast to add to your party from the Beastdex: ").capitalize()
 
     for i in range(len(inx.beast_dex)):
+        
         if inx.beast_dex[i].name == choose_beast:
+            
             print(inx.beast_dex[i].name + " was added to your party!")
             player.gang.append(inx.beast_dex[i])
 
@@ -56,18 +56,22 @@ for i in range(6):
         else:
             print(" \n",(i + 1),"-",player.gang[i].name, "".rjust(align, " "),player.gang[i].element[0],"/",player.gang[i].element[1])
 
-    if i == 5:
-        print("\nAlright, now choose your opp: ")
-        break
-
     confirm = input("\nDo you want to add another Beast to your Gang, yes or no?: ").lower()
     if confirm == "no":
         print("\nAlright, now choose your opp!")
         break
 
-
+def gameplay(player):
+    btl.choose_opp()
+    print("You've sent out", player.gang[0].name, "and", btl.opp.name, "has sent out", btl.opp.gang[0].name )
     
+    action = "a"
+    
+    while action == "a":
+        action = input("\nPress 'a' to attack: ")
+        btl.fight(player)
 
+gameplay(player)
 
     
 

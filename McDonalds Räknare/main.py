@@ -14,7 +14,7 @@ sales_data = [
 {"Hamburgare": 180, "Pommes frites": 230, "Läsk": 200, "Milkshake": 55, "Sallader": 39, "McNuggets": 115}
 ]
 
-costs = [50, 25, 20, 30, 45, 35]
+costs = {"Hamburgare" : 50}
 total_money = []
 
 for i in range(len(sales_data)):
@@ -23,14 +23,8 @@ for i in range(len(sales_data)):
     money_day = 0
 
     for product in sales_data[i]:
-        product_sales = sales_data[i][product]
-        
-        sales_day.append(product_sales)
+       money_day += sales_data[i][product] * costs[product]
 
-    for i in range(len(sales_day)):
-        money = sales_day[i] * costs[i]
-
-        money_day += money
     
     total_money.append(money_day)
 

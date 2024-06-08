@@ -69,7 +69,93 @@ trainer_list = [
     Trainer("Anton", "Kvinna", [], [beast_dex[0], beast_dex[1]])
 ]
 
-
+resistances = {
+    Types.Normal: {
+        "weak":[Types.Fighting],
+        "resist":[],
+        "immune":[Types.Ghost]
+    },
+    Types.Fighting: {
+        "weak":[Types.Flying, Types.Psychic],
+        "resist":[Types.Rock, Types.Dark],
+        "immune":[]
+    },
+    Types.Flying: {
+        "weak":[Types.Electric, Types.Ice, Types.Rock],
+        "resist":[Types.Grass, Types.Fighting, Types.Bug],
+        "immune":[Types.Ground]
+    },
+    Types.Fire: {
+        "weak":[Types.Water, Types.Ground, Types.Rock],
+        "resist":[Types.Fire, Types.Grass, Types.Ice, Types.Steel],
+        "immune":[]
+    },
+    Types.Water: {
+        "weak":[Types.Grass, Types.Electric],
+        "resist":[Types.Fire, Types.Water, Types.Ice, Types.Steel],
+        "immune":[]
+    },
+    Types.Grass: {
+        "weak":[Types.Fire, Types.Ice, Types.Poison, Types.Flying, Types.Bug],
+        "resist":[Types.Water, Types.Grass, Types.Electric, Types.Ground],
+        "immune":[]
+    },
+    Types.Electric: {
+        "weak":[Types.Ground],
+        "resist":[Types.Electric, Types.Flying, Types.Steel],
+        "immune":[]
+    },
+    Types.Poison: {
+        "weak":[Types.Ground, Types.Psychic],
+        "resist":[Types.Grass, Types.Fighting, Types.Poison, Types.Bug],
+        "immune":[]
+    },
+    Types.Rock: {
+        "weak":[Types.Water, Types.Grass, Types.Fighting, Types.Ground, Types.Steel],
+        "resist":[Types.Normal, Types.Fire, Types.Poison, Types.Flying],
+        "immune":[]
+    },
+    Types.Ground: {
+        "weak":[Types.Water, Types.Grass, Types.Ice],
+        "resist":[Types.Poison, Types.Rock],
+        "immune":[Types.Electric]
+    },
+    Types.Bug: {
+        "weak":[Types.Fire, Types.Flying, Types.Rock],
+        "resist":[Types.Grass, Types.Ice, Types.Ground],
+        "immune":[]
+    },
+    Types.Ghost: {
+        "weak":[Types.Ghost, Types.Dark],
+        "resist":[Types.Poison, Types.Bug],
+        "immune":[Types.Normal, Types.Fighting]
+    },
+    Types.Psychic: {
+        "weak":[Types.Bug, Types.Ghost, Types.Dark],
+        "resist":[Types.Fighting, Types.Psychic],
+        "immune":[]
+    },
+    Types.Ice: {
+        "weak":[Types.Fire, Types.Fighting, Types.Rock, Types.Steel],
+        "resist":[Types.Ice],
+        "immune":[]
+    },
+    Types.Dragon: {
+        "weak":[Types.Ice, Types.Dragon],
+        "resist":[Types.Fire, Types.Water, Types.Grass, Types.Electric],
+        "immune":[]
+    },
+    Types.Steel: {
+        "weak":[Types.Fire, Types.Fighting, Types.Ground],
+        "resist":[Types.Normal, Types.Grass, Types.Ice, Types.Flying, Types.Psychic, Types.Bug, Types.Rock, Types.Dragon, Types.Steel],
+        "immune":[Types.Poison]
+    },
+    Types.Dark: {
+        "weak":[Types.Fighting, Types.Bug],
+        "resist":[Types.Ghost, Types.Dark],
+        "immune":[Types.Psychic]
+    },
+}
 
         
 
